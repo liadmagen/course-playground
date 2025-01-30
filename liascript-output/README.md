@@ -205,7 +205,6 @@ if (window.pyodide_running) {
 @end
 
 @onload
-<script>
 (async () => {
     if (!window.pyodide) {
         window.pyodide = await loadPyodide({fullStdLib: false});
@@ -213,7 +212,6 @@ if (window.pyodide_running) {
     window.pyodide_modules = ["numpy", "matplotlib", "scipy", "pandas"];
     await window.pyodide.loadPackage(window.pyodide_modules);
 })();
-</script>
 @end
 
 <!--
