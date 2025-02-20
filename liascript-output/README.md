@@ -14,6 +14,7 @@ comment:  Use the real Python in your LiaScript courses, by loading this
 
 script:   https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.js
 
+@onload: window.py_packages = ["matplotlib", "numpy"]
 
 @Pyodide.exec: @Pyodide.exec_(@uid,```@0```)
 
@@ -341,7 +342,7 @@ manually in your `onload` macro, as it is shown below.
 <!--
 author:  ...
 email:   ...
-
+ 
 import:  https://github.com/LiaTemplates/Pyodide
 
 @onload: window.py_packages = ["matplotlib", "numpy"]
